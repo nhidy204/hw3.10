@@ -477,7 +477,7 @@ li.dropdown {
     margin-right: 2%;
     display: flex;
     overflow-x: auto;
-    width: 100%;
+    width: 92%;
     position: relative;
     gap: 0;
   }
@@ -486,7 +486,7 @@ li.dropdown {
     margin-right: 2%;
     display: flex;
     overflow-x: auto;
-    width: 100%;
+    width: 92%;
     position: relative;
     gap: 0;
   }
