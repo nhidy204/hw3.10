@@ -402,6 +402,9 @@ li.dropdown {
     background-color: #065e18;
     color: #fff;
   }
+  ul li a {
+    font-size: 14px;
+  }
 }
 @media (max-width: 768px) {
   .smallMenu-content {
@@ -409,7 +412,6 @@ li.dropdown {
     box-shadow: none;
     border: none;
     min-width: 100%;
-    position: static;
     left: auto;
     top: auto;
     width: 100%;
@@ -442,6 +444,7 @@ li.dropdown {
     padding: 15px 20px;
     width: 100%;
     text-align: center;
+    font-size: 10px;
   }
   .drop-extra {
     justify-content: center;
@@ -517,7 +520,7 @@ li.dropdown {
     font-size: 11px;
   }
 }
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 1024px) and (min-width: 768px) {
   body {
     padding: 110px 0 0 0;
   }
