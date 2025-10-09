@@ -1,0 +1,32 @@
+$breakpoints: (
+  "xs": 320px,
+  "sm": 480px,
+  "md": 768px,
+  "mdplus": 941px,
+  "lg": 1120px
+);
+
+@mixin mq($breakpoint, $rule: min) {
+  $size: map-get($breakpoints, $breakpoint);
+
+  @if $size == null {
+    @warn "Breakpoint `#{$breakpoint}` unvalid in map $breakpoints ";
+  } @else if $rule == max {
+    @media screen and (max-width: $size) {
+      @content;
+    }
+  } @else if $rule == min {
+    @media screen and (min-width: $size) {
+      @content;
+    }
+  } @else {
+    @warn "Rule `#{$rule}` unvalid, only use min or max";
+  }
+}
+.box {
+  background: blue;
+
+  @include mq(md, max) {
+    background: red;
+  }
+}

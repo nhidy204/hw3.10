@@ -1,0 +1,55 @@
+@charset "UTF-8";
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+.checkboxX {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type=checkbox]:disabled + .checkmark {
+  cursor: not-allowed;
+  background: #8f8f8f;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]:checked + .checkmark {
+  background-color: #111;
+  border-color: #111;
+}
+
+input[type=checkbox]:checked + .checkmark:after {
+  content: "✔";
+  color: #fff;
+  font-size: 24px;
+}
+
+input[type=checkbox][Indeterminate] + .checkmark {
+  background-color: #111;
+  border-color: #111;
+}
+
+input[type=checkbox][Indeterminate] + .checkmark:after {
+  content: "-";
+  color: #fff;
+  font-size: 50px;
+  margin-bottom: 11px;
+}/*# sourceMappingURL=checkbox-future.css.map */
