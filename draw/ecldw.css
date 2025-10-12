@@ -297,6 +297,7 @@ li.dropdown {
 .title-books {
   margin-bottom: 5px;
   font-size: 14px;
+  height: 40%;
 }
 
 .prize {
@@ -311,6 +312,7 @@ li.dropdown {
 
 .text {
   text-align: center;
+  min-width: 20px;
 }
 
 .tool {
