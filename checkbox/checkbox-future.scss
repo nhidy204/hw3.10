@@ -34,11 +34,11 @@ input[type="checkbox"]:checked + .checkmark:after {
   color: #fff;
   font-size: 24px;
 }
-input[type="checkbox"][Indeterminate] + .checkmark {
+input[type="checkbox"][indeterminate] + .checkmark {
   background-color: #111;
   border-color: #111;
 }
-input[type="checkbox"][Indeterminate] + .checkmark:after {
+input[type="checkbox"][indeterminate] + .checkmark:after {
   content: '-';
   color: #fff;
   font-size: 50px;
