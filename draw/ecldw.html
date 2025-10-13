@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ecldw</title>
     <link rel="stylesheet" href="ecldw.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<input type="checkbox" id="menu-toggle" class="menu-toggle">
+<label for="menu-toggle" class="menu-icon"><i class="fas fa-bars"></i></label>
+<nav class="sidebar">
 <ul>
-    <li><a href="#" style="padding: 20px 50px; font-size: 20px">Home</a></li>
+    <li><a href="#" class="home" style="padding: 20px 50px; font-size: 20px">Home</a></li>
     <li class="dropdown">
         <a href="#" class="drop-extra">Category<i class="fas fa-angle-up"></i></a>
         <div class="dropdown-content">
@@ -84,7 +88,7 @@
         </div>
     </li>
 
-    <li><a href="#" style="padding: 20px 58px; font-size: 20px">Books</a></li>
+    <li><a href="#" class="books" style="padding: 20px 58px; font-size: 20px">Books</a></li>
 
     <li class="dropdown userMenu"><button class="circle"></button>
         <div class="dropdown-content">
@@ -102,7 +106,7 @@
                     <div class="muted">VIP1</div>
                 </div>
                 <div class="iconMuted"><i class="far fa-edit"></i></div>
-            </div>
+            </div>  
             <div class="menuRow">
                 <div>Change password</div>
                 <div class="iconMuted"><i class="far fa-edit"></i></div>
@@ -111,6 +115,7 @@
         </div>
     </li>
 </ul>
+</nav>
 
 <div class="book-section">
     <div class="labelBig">

@@ -15,10 +15,16 @@ $background-color_5: #fff;
 $background-color_6: #065e18;
 $background-color_7: green;
 $background-color_8: #b8b8b8;
+$color_10: #333;
+$background-color_9: #7de9d7;
 
 body {
 	margin: 0;
 	padding: 100px 0 0 0;
+}
+.menu-icon,
+.menu-toggle {
+  display: none;
 }
 ul {
 	list-style-type: none;
@@ -433,10 +439,11 @@ li.dropdown {
 		}
 	}
 	body {
-		padding-top: 300px;
+		padding-top: 90px;
 	}
 	ul {
 		overflow: hidden;
+		position: static;
 		li {
 			width: 100%;
 			border-right: none;
@@ -447,19 +454,17 @@ li.dropdown {
 				border-bottom: none;
 			}
 			a {
-				padding: 15px 20px;
-				width: 100%;
+				padding: 15px 20px !important;
 				text-align: center;
-				font-size: 10px;
+				font-size: 14px !important;
 			}
 		}
 	}
-	.drop-extra {
-		justify-content: center;
-		margin-left: -30px;
-		&:hover {
-			text-align: center;
-		}
+	.home{
+		padding: 15px 105px !important;
+	}
+	.books {
+		padding: 15px 105px !important;
 	}
 	.dropdown-content {
 		position: static;
@@ -531,7 +536,73 @@ li.dropdown {
 	.sold {
 		font-size: 11px;
 	}
+	.drop-extra {
+		display: flex !important;
+		justify-content: center;
+		&:hover {
+			text-align: center;
+		}
+	}
+
+	.menu-toggle {
+		display: none;
+		&:checked {
+			~ {
+				.sidebar {
+					left: 0;
+				}
+			}
+		}
+	}
+
+	.menu-icon {
+		display:block;
+		position: fixed;
+		top: 20px;
+		left: 20px;
+		font-size: 28px;
+		color: $color_10;
+		z-index: 10000;
+		cursor: pointer;
+		background: white;
+		border: 2px solid green;
+		border-radius: 8px;
+		padding: 6px 10px;
+	}
+
+	.sidebar {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: -260px;
+		width: 250px;
+		height: 100vh;
+		background-color: $background-color_9;
+		box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+		overflow-y: auto;
+		transition: left 0.3s ease;
+		z-index: 9999;
+		ul {
+			display: block;
+			padding-top: 80px;
+			border: none;
+			li {
+				width: 100%;
+				border-bottom: 1px solid #333;
+				a {
+					display: block;
+					padding: 15px;
+					font-size: 16px;
+					color: $color_10;
+					text-align: left;
+				}
+			}
+		}
+	}
+	
+
 }
+
 @media (max-width: 1024px) and (min-width: 768px) {
 	body {
 		padding: 110px 0 0 0;
@@ -553,7 +624,7 @@ li.dropdown {
 }
 @media (max-width: 480px) {
 	body {
-		padding: 300px 0 0 0;
+		padding: 90px 0 0 0;
 	}
 	.labelBig {
 		margin: 15px 5px;
