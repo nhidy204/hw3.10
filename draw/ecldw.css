@@ -111,7 +111,7 @@ li.dropdown {
   position: absolute;
   min-width: 160px;
   background-color: white;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px 0 #333;
   z-index: 1;
 }
 .dropdown-content a {
@@ -134,11 +134,11 @@ li.dropdown {
 
 .smallMenu-content {
   display: none;
-  border: 1px solid #333333;
+  border: 1px solid #333;
   position: absolute;
   top: 0;
   left: 100%;
-  background-color: #fff;
+  background-color: white;
   min-width: 500px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   padding: 10px;
@@ -196,7 +196,7 @@ li.dropdown {
   right: 0;
   left: auto;
   min-width: 300px;
-  background: #fff;
+  background: white;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -215,7 +215,7 @@ li.dropdown {
 }
 .userMenu .menuSection {
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid white;
 }
 .userMenu .menuSection--flex {
   display: flex;
@@ -228,7 +228,7 @@ li.dropdown {
 }
 .userMenu .menuRow {
   padding: 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid white;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -345,7 +345,7 @@ li.dropdown {
   padding: 10px;
 }
 
-@media (max-width: 1366px) {
+@media screen and (max-width: 1366px) {
   .smallMenu-content {
     position: static;
     box-shadow: none;
@@ -363,13 +363,13 @@ li.dropdown {
   }
   .smallMenu-content a:hover {
     background-color: #065e18;
-    color: #fff;
+    color: white;
   }
   ul li a {
     font-size: 14px;
   }
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .smallMenu-content {
     position: static;
     box-shadow: none;
@@ -412,18 +412,21 @@ li.dropdown {
   .home {
     padding: 15px 105px !important;
   }
+  .home:hover {
+    color: white;
+  }
   .books {
     padding: 15px 105px !important;
+  }
+  .books:hover {
+    color: white;
   }
   .dropdown-content {
     position: static;
     display: none;
     width: 100%;
     box-shadow: none;
-    border: 1px solid #ddd;
-  }
-  .dropdown:hover .dropdown-content {
-    display: block;
+    border: 1px solid white;
   }
   .labelBig {
     margin: 20px 30px;
@@ -454,17 +457,6 @@ li.dropdown {
     width: 92%;
     position: relative;
     gap: 0;
-  }
-  .pagination {
-    display: flex;
-    font-size: 20px;
-    gap: 8px;
-  }
-  .pagination i {
-    padding: 6px;
-    font-size: 18px;
-    width: 28px;
-    height: 28px;
   }
   .book-item {
     min-width: 100%;
@@ -516,7 +508,7 @@ li.dropdown {
     width: 250px;
     height: 100vh;
     background-color: #7de9d7;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 0 10px black;
     overflow-y: auto;
     transition: left 0.3s ease;
     z-index: 9999;
@@ -538,7 +530,7 @@ li.dropdown {
     text-align: left;
   }
 }
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   body {
     padding: 90px 0 0 0;
   }
@@ -549,16 +541,6 @@ li.dropdown {
   .labelSmall {
     font-size: 12px;
     padding: 4px 10px;
-  }
-  .pagination {
-    font-size: 18px;
-    gap: 6px;
-  }
-  .pagination i {
-    padding: 4px;
-    font-size: 16px;
-    width: 24px;
-    height: 24px;
   }
   .new-arrivals {
     margin-left: 1%;
